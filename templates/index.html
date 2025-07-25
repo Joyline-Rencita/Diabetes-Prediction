@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Predictor</title>
+    <style>
+        body { font-family: Arial; padding: 30px; }
+        input, label { display: block; margin-bottom: 10px; }
+        input { width: 300px; padding: 8px; }
+        .box { max-width: 400px; margin: auto; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>Diabetes Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Pregnancies</label><input type="number" name="Pregnancies" required>
+        <label>Glucose</label><input type="number" name="Glucose" required>
+        <label>BloodPressure</label><input type="number" name="BloodPressure" required>
+        <label>SkinThickness</label><input type="number" name="SkinThickness" required>
+        <label>Insulin</label><input type="number" name="Insulin" required>
+        <label>BMI</label><input type="number" step="any" name="BMI" required>
+        <label>DiabetesPedigreeFunction</label><input type="number" step="any" name="DiabetesPedigreeFunction" required>
+        <label>Age</label><input type="number" name="Age" required>
+        <br><input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</div>
+</body>
+</html>
