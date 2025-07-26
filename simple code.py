@@ -68,7 +68,6 @@ prediction = best_model.predict(x_test)[0]
 print("\nPrediction for custom input:")
 print("Diabetes Detected ✅" if prediction == 1 else "No Diabetes ❌")
 
-
 OUTPUT :
 
 Random Forest: 72.08%
