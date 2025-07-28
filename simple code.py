@@ -54,7 +54,6 @@ print(f"\nBest Classifier: {best_model_name} with accuracy {results[best_model_n
 
 # ------------------ Custom Test Inputs ------------------
 
-
 # Example test cases (manually entered as in your demo)
 # Format: [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
 
@@ -67,6 +66,8 @@ prediction = best_model.predict(x_test)[0]
 
 print("\nPrediction for custom input:")
 print("Diabetes Detected ✅" if prediction == 1 else "No Diabetes ❌")
+
+# ==============================================================================================================================================
 
 OUTPUT :
 
